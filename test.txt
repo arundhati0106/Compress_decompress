@@ -1,0 +1,46 @@
+//create a new File
+File file = new File("sample.txt");   //sample.text here only represents the file
+
+if(!file.exists()) 			  //if file doesnt already exist, then create new file
+  {file.createNewFile();} 
+
+............................................................
+//read values from the input, using fis
+FileInputStream -
+
+System.out.println(fis.read());       //returns ASCII value of first character in the file 
+        
+System.out.println((char)fis.read()); //returns value of first character in the file 
+____        
+int i= fis.read();                    //reads the first character in test file's ASCII
+
+while(i != -1)                        //every character has an ASCII value, i=-1 => no more characters to be read, i.e. end of file
+  {char c = (char)i;                  //typecast
+   System.out.print(c);               //returns ASCII value of first character in the file 
+   i = fis.read();                    //reads the next character
+  }
+
+//after being done with fis, close it... good practice
+fis.close();
+
+/*...........................................................
+eg -> 
+sample.txt has "My Name is Arundhati" in it
+SOP(fis.read()) -> return 77, ASCII of 'M'
+SOP((char)fis.read()) -> return M, the character
+---
+int i = fis.read();   ->i stores ASCII value of first char
+while(i!=-1)          ->every character has an ASCII value, if it is -1, meaning its blank, no characters end of sample.text 
+  {char c = (char)i;  ->typecasts it to char
+   SOP(c);            ->prints that char
+   i = fis.read();    ->moves to next char
+  }
+//now i is at blank, i.e. no more characters present -> exit reader, fis
+
+fis.close()
+............................................................*/
+
+
+
+
+//if anything gives an error, throws an exception, surround it with try, catch, so as to not disrupt flow of code
