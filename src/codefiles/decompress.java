@@ -22,10 +22,7 @@ public class decompress {
         
         FileInputStream fis = new FileInputStream(file);
         GZIPInputStream gzipIS = new GZIPInputStream(fis);
-        
-        //output file type
-        String save_format = fileDirectory.substring(fileDirectory.length() - 3);
-        FileOutputStream fos = new FileOutputStream(fileDirectory + "\\decompressedFile." + save_format);
+        FileOutputStream fos = new FileOutputStream(fileDirectory + "\\decompressedFile.txt");
         
         byte [] buffer = new byte[1024];
         int len;
