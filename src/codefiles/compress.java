@@ -29,13 +29,19 @@ public class compress {
         
         FileInputStream fis = new FileInputStream(file); //read data from source, var name = file, file here is path
         FileOutputStream fos = new FileOutputStream(fileDirectory + "\\compressedFile.gz");
+        
+        //creates a zip file of the file, provided in the parameter
         GZIPOutputStream gzipOS = new GZIPOutputStream(fos);
         
+        //store data inside each file using this array
         byte [] buffer = new byte[1024];
         int len;
         
-        while((len = fis.read(buffer)) != -1)
-            {gzipOS.write(buffer, 0, len);}
+        //len reads from input stream, it return -1 when it's at the end of the string... keep reading until we are at end of string
+        while((len = fis.read(buffer)) != -1){
+            //len return no of bytes read
+            gzipOS.write(buffer, 0, len); //bytes read, starting point, no of bytes read
+        }
         
         fis.close();
         gzipOS.close();
