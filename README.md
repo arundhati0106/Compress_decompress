@@ -1,5 +1,5 @@
 # File Compressor-Decompressor
-#Technologies Used
+# Technologies Used
 - Java Swing
 - Java AWT
 - Apache NetBeans IDE 15
