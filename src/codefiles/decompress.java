@@ -4,6 +4,7 @@
  */
 package codefiles;
 
+import javax.swing.*;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -22,10 +23,13 @@ public class decompress {
         
         FileInputStream fis = new FileInputStream(file);
         GZIPInputStream gzipIS = new GZIPInputStream(fis);
-        FileOutputStream fos = new FileOutputStream(fileDirectory + "\\decompressedFile.txt");
+
+        String extension= JOptionPane.showInputDialog("enter extension in which you wish to decompress the file to.(Example txt, mkv, pdf)");
+        FileOutputStream fos = new FileOutputStream(fileDirectory + "\\decompressedFile." +extension);
         
         byte [] buffer = new byte[1024];
         int len;
+
         while((len = gzipIS.read(buffer)) != -1)
             {fos.write(buffer,0,len);}
         

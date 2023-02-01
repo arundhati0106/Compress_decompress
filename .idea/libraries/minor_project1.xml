@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="minor_project1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/demo_execulatable_jar_file/minor_project1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
