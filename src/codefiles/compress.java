@@ -46,11 +46,12 @@ public class compress {
         fis.close();
         gzipOS.close();
         fos.close();
+        
+        //filesizeview filesize=new filesizeview(file, new File(fileDir+"\\compressedfile.gz"));
     }
     
     public static void main(String[] args) throws IOException {
         //to check our method's functionality
-//        System.out.print("Hello");
         File path = new File("D:\\coding proj\\netbeans\\minor_project1\\test.txt");
         method(path);
     }
